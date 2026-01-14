@@ -2,21 +2,5 @@
   {
     "version": "main",
     "url": "https://eclipse-score.github.io/inc_os_autosd/main/"
-  },
-  {
-    "version": "pr-12",
-    "url": "https://eclipse-score.github.io/inc_os_autosd/pr-12/"
-  },
-  {
-    "version": "pr-13",
-    "url": "https://eclipse-score.github.io/inc_os_autosd/pr-13/"
-  },
-  {
-    "version": "pr-18",
-    "url": "https://eclipse-score.github.io/inc_os_autosd/pr-18/"
-  },
-  {
-    "version": "pr-19",
-    "url": "https://eclipse-score.github.io/inc_os_autosd/pr-19/"
   }
 ]
