@@ -2,5 +2,9 @@
   {
     "version": "main",
     "url": "https://eclipse-score.github.io/inc_os_autosd/main/"
+  },
+  {
+    "version": "pr-25",
+    "url": "https://eclipse-score.github.io/inc_os_autosd/pr-25/"
   }
 ]
