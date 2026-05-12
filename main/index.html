@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -360,10 +360,9 @@
 <ul>
 <li><p><a class="reference internal" href="#documentation" id="id5">Documentation</a></p></li>
 <li><p><a class="reference internal" href="#toolchain" id="id6">Toolchain</a></p></li>
-<li><p><a class="reference internal" href="#reference-integration" id="id7">Reference Integration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuration" id="id8">Configuration</a></p></li>
+<li><p><a class="reference internal" href="#configuration" id="id7">Configuration</a></p></li>
 </ul>
 </nav>
 <section id="overview">
@@ -374,7 +373,7 @@ It integrates best practices for build, test, CI/CD and documentation.</p>
 </section>
 <section id="requirements">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Requirements</a><a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-9e89dfd9">
+<div class="need_container docutils container" id="SNCB-3db61d79">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_stkh_req table" id="stkh_req__supported_platforms__autosd_dev">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -436,8 +435,8 @@ It integrates best practices for build, test, CI/CD and documentation.</p>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">toolchain/</span></code></p></td>
 <td><p>Bazel toolchain to build modules using AutoSD’s tooling</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">reference_integration/</span></code></p></td>
-<td><p>Tooling to run AutoSD in different targets, such as QEMU</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code></p></td>
+<td><p>Build files for testing the toolchain on top of S-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">docs/</span></code></p></td>
 <td><p>Documentation</p></td>
@@ -485,13 +484,9 @@ rm<span class="w"> </span>MODULE.bazel.lock<span class="w"> </span><span class="
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Toolchain</a><a class="headerlink" href="#toolchain" title="Link to this heading">#</a></h3>
 <p>TBD</p>
 </section>
-<section id="reference-integration">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Reference Integration</a><a class="headerlink" href="#reference-integration" title="Link to this heading">#</a></h3>
-<p>TBD</p>
-</section>
 </section>
 <section id="configuration">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Link to this heading">#</a></h2>
 <p>The <cite>project_config.bzl</cite> file defines metadata used by Bazel macros.</p>
 <p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PROJECT_CONFIG</span> <span class="o">=</span> <span class="p">{</span>
@@ -537,7 +532,6 @@ rm<span class="w"> </span>MODULE.bazel.lock<span class="w"> </span><span class="
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">Quick Start</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toolchain">Toolchain</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-integration">Reference Integration</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
