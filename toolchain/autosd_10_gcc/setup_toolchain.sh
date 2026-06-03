@@ -95,6 +95,9 @@ PACKAGES=(
     "libmpc"
     "gmp"
     "mpfr"
+    "jansson"
+    "libatomic"
+    "libtsan"
 )
 
 USER_AGENT="Multi-GCC-Toolchain/1.0"
@@ -274,7 +277,7 @@ echo "Setting up toolchain library directory..." >&2
 mkdir -p usr/lib64/toolchain
 
 shopt -s nullglob
-for lib_pattern in "libbfd*.so*" "libopcodes*.so*" "libctf*.so*" "libsframe*.so*" "libmpc.so*" "libgmp.so*" "libmpfr.so*"; do
+for lib_pattern in "libbfd*.so*" "libopcodes*.so*" "libctf*.so*" "libsframe*.so*" "libmpc.so*" "libgmp.so*" "libmpfr.so*" "libjansson.so*" "libatomic*"; do
     for lib in usr/lib64/${lib_pattern}; do
         if [ -f "$lib" ]; then
             ln -sf "../$(basename "$lib")" usr/lib64/toolchain/
@@ -317,7 +320,7 @@ for tool in gcc g++ cpp ar ld ld.bfd objcopy strip objdump as nm gcov; do
 #!/bin/sh
 SCRIPT_DIR="$(/usr/bin/dirname "$(/usr/bin/readlink -f "$0")")"
 REPO_ROOT="$(/usr/bin/dirname "$(/usr/bin/dirname "$SCRIPT_DIR")")"
-exec /usr/bin/env LD_LIBRARY_PATH="$REPO_ROOT/usr/lib64/toolchain:$LD_LIBRARY_PATH" "$REPO_ROOT/usr/bin/TOOL_NAME_original" "$@"
+exec /usr/bin/env PATH="$REPO_ROOT/usr/bin:$PATH" LD_LIBRARY_PATH="$REPO_ROOT/usr/lib64/toolchain:$LD_LIBRARY_PATH" "$REPO_ROOT/usr/bin/TOOL_NAME_original" "$@"
 WRAPPER_EOF
 
     sed -i "s/TOOL_NAME/$tool/g" "${tool_path}_wrapper"
